@@ -28,6 +28,67 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+        if event.type == pygame.MOUSEBUTTONUP:
+            pos = pygame.mouse.get_pos()
+
+            if first.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (50, 50, 100,100))
+                
+                pygame.draw.circle(win, (0,255,0), (100,100), 50)
+
+            if second.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (225, 50, 100,100))
+                
+                pygame.draw.circle(win, (0,255,0), (275,100), 50)
+
+            if third.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (400, 50, 100,100))
+                
+                pygame.draw.circle(win, (0,255,0), (450,100), 50)
+
+            if fourth.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (50, 225, 100,100))
+
+                pygame.draw.circle(win, (0,255,0), (100,275), 50)
+
+            if fifth.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (225, 225, 100,100))
+
+                pygame.draw.circle(win, (0,255,0), (275,275), 50)
+
+            if sixth.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (400, 225, 100,100))
+
+                pygame.draw.circle(win, (0,255,0), (450,275), 50)
+
+            if seventh.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (50, 400, 100,100))
+
+                pygame.draw.circle(win, (0,255,0), (100,450), 50)
+
+            if eighth.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (225, 400, 100,100))
+
+                pygame.draw.circle(win, (0,255,0), (275,450), 50)
+
+            if ninth.collidepoint(pos):
+
+                pygame.draw.rect(win, (255, 0, 0), (400, 400, 100,100))
+
+                pygame.draw.circle(win, (0,255,0), (450,450), 50)
+
     pygame.display.update()
 
 pygame.quit()
